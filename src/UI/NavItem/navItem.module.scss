@@ -1,0 +1,24 @@
+.navItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  height: 63px;
+
+  .icon,
+  .title {
+    transition: all 0.5s ease;
+  }
+
+  &:hover {
+    .icon {
+      color: #555555;
+    }
+
+    .title {
+      color: #555555;
+      font-size: 10px;
+    }
+  }
+}

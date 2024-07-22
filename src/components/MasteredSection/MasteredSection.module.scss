@@ -1,0 +1,43 @@
+.masteredSection {
+  padding: 50px;
+  max-width: 50%;
+  width: 100%;
+  // border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+
+  .title {
+    width: 150px;
+    font-size: 35px;
+
+    &::after {
+      display: block;
+    }
+  }
+}
+
+
+@media screen and (max-width: 1000px) {
+  .masteredSection {
+
+
+    .title::after {
+      content: "";
+      width: 100%;
+      height: 5px;
+      background: #000;
+      background-color: red;
+      animation: drawline 2s forwards;
+    }
+  }
+}
+
+@keyframes drawline {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}

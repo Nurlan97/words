@@ -1,0 +1,44 @@
+.mainPage {
+  display: flex;
+
+  .learningSectionWrapper {
+    max-width: 50%;
+    width: 100%;
+  }
+
+  .otherSectionsWrapper {
+    max-width: 50%;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .mainPage {
+    position: relative;
+
+    .learningSectionWrapper {
+      max-width: 100%;
+      width: 100%;
+    }
+    .otherSectionsWrapper {
+      position: absolute;
+      top: 0;
+      right: 0;
+      max-width: 65%;
+      width: 100%;
+    }
+  }
+}
+@media screen and (max-width: 550px) {
+  .mainPage {
+    position: relative;
+
+    .otherSectionsWrapper {
+      position: absolute;
+      top: 0;
+      right: 0;
+      max-width: 80%;
+      width: 100%;
+    }
+  }
+}

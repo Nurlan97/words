@@ -1,0 +1,35 @@
+.button {
+  max-width: 170px;
+  width: 100%;
+  color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1240px) {
+  .button {
+    max-width: 150px;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1170px) {
+  .button {
+    max-width: 130px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1030px) {
+  .button {
+    max-width: 115px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 940px) {
+  .button {
+    max-width: 100px;
+    width: 100%;
+  }
+}
