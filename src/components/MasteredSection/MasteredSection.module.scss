@@ -2,42 +2,31 @@
   padding: 50px;
   max-width: 50%;
   width: 100%;
+  height: 100vh;
   // border: 1px solid black;
   display: flex;
   flex-direction: column;
   gap: 50px;
+  background: #fff;
 
-  .title {
+
+  .titleWrapper {
     width: 150px;
-    font-size: 35px;
 
-    &::after {
+    .title {
+      width: 150px;
+      font-size: 35px;
+    }
+
+    .titleUnderline {
       display: block;
     }
   }
 }
 
-
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 900px) {
   .masteredSection {
-
-
-    .title::after {
-      content: "";
-      width: 100%;
-      height: 5px;
-      background: #000;
-      background-color: red;
-      animation: drawline 2s forwards;
-    }
-  }
-}
-
-@keyframes drawline {
-  from {
-    width: 0;
-  }
-  to {
+    max-width: 100%;
     width: 100%;
   }
 }

@@ -3,6 +3,7 @@ import Card from "../Card/Card";
 import styles from "./cards.module.scss";
 import IsCompletedContext from "../../utils/isCompletedContext";
 import { observer } from 'mobx-react-lite';
+import wordsStore from "../../store/wordsStore";
 
 const Cards = observer(() => {
   const { isCompleted } = useContext(IsCompletedContext);
@@ -29,7 +30,7 @@ const Cards = observer(() => {
         isCompleted ? (
           ""
         ) : (
-          <div className={styles.cardWrapper}>
+          <div className={styles.cardWrapper} onClick={wordsStore.openCard }>
             <Card
               key={item.id}
               img={item.img}

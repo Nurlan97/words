@@ -6,8 +6,9 @@ import wordsStore from "../../store/wordsStore";
 const LearningSection = observer(() => {
   return (
     <div className={styles.learningSection}>
-      <h1 className={styles.title} onClick={() => wordsStore.openSection('learning')}>Learning</h1>
-      <Cards />
+      <div className={styles.cardsList}>
+        <Cards />
+      </div>
     </div>
   );
 });

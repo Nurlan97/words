@@ -39,7 +39,13 @@ const Card = observer(({ img, title, status, progress }: CardProps) => {
             <h2 className={styles.cardTitle}>{title}</h2>
             <h3 className={styles.cardSubtitle}>{status}</h3>
           </div>
-          <div className={styles.saved} onClick={handleSavedBtn}>
+          <div
+            className={styles.saved}
+            onClick={(e) => {
+              e.stopPropagation(); // Останавливаем всплытие события
+              handleSavedBtn();
+            }}
+          >
             {savedBtnClicked ? (
               <FaRegBookmark className={styles.savedIcon} />
             ) : (

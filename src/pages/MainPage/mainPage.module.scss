@@ -1,44 +1,71 @@
 .mainPage {
   display: flex;
+  width: 100%;
 
-  .learningSectionWrapper {
-    max-width: 50%;
+  .main {
+    display: flex;
+    flex-direction: column;
     width: 100%;
+
+    .sectionsTitleWrapper {
+      padding: 20px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      height: 8vh;
+
+      .sectionTitleWrapper {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+
+        .sectionTitle {
+          max-width: 50%;
+          width: 100%;
+          text-align: center;
+          font-size: 25px;
+        }
+      }
+    }
   }
 
-  .otherSectionsWrapper {
-    max-width: 50%;
+  .sectionDetails {
+    display: flex;
+    max-width: 100%;
     width: 100%;
   }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 900px) {
   .mainPage {
-    position: relative;
-
-    .learningSectionWrapper {
-      max-width: 100%;
-      width: 100%;
-    }
-    .otherSectionsWrapper {
-      position: absolute;
-      top: 0;
-      right: 0;
-      max-width: 65%;
-      width: 100%;
+    .main {
+      .sectionsTitleWrapper {
+        .sectionTitle {
+          width: 100%;
+          font-size: 25px;
+          position: relative;
+          text-align: center;
+          
+          .titleUnderline {
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            background: red;
+            top: 35px;
+            left: 0;
+            animation: drawline 2s forwards;
+          }
+        }
+      }
     }
   }
 }
-@media screen and (max-width: 550px) {
-  .mainPage {
-    position: relative;
 
-    .otherSectionsWrapper {
-      position: absolute;
-      top: 0;
-      right: 0;
-      max-width: 80%;
-      width: 100%;
-    }
+@keyframes drawline {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
   }
 }
