@@ -1,0 +1,78 @@
+.form {
+  border: 5px solid #999;
+  // border: 1px solid #fa9e31;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 32px;
+  border-radius: 20px;
+
+  .title {
+    font-size: 25px;
+    text-align: center;
+  }
+
+  .wordInputWrapper,
+  .descriptionInputWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    label {
+      cursor: pointer;
+    }
+
+    .errors {
+      color: rgb(234, 11, 11);
+    }
+
+    .wordNameInput,
+    .wordDescriptionInput {
+      padding: 20px;
+      border: 1px solid #999;
+      // border: 1px solid #fa9e31;
+      border-radius: 20px;
+      outline: none;
+      cursor: pointer;
+    }
+  }
+
+  .wordImageInputWrapper {
+    background: #ededed;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    width: 100%;
+    height: 100px;
+    border-radius: 20px;
+    cursor: pointer;
+
+    .uploadedImageWrapper {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      width: 100%;
+      height: 100%;
+
+      .uploadedImage {
+        border-radius: 15px;
+      }
+    }
+  }
+
+  .submitBtn {
+    height: 75px;
+    border-radius: 20px;
+    background: #000;
+    // background: #fa9e31;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: ease-out 0.5s all;
+
+    &:hover {
+      background: #fa9e31;
+    }
+  }
+}
